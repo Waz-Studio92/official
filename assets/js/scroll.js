@@ -10,21 +10,18 @@ window.addEventListener('scroll', () => {
     });
 });
 
-const options={
-    threshold:0
-};
-
 document.addEventListener("DOMContentLoaded", () => {
     const options = {
         root: null,
         rootMargin: "-10% 0px", // 少し画面に入ってから発火させる
+        threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("active");
-                // 一度表示されたら監視を解除（リソース節約）
+                // 一度表示されたら監視を解除
                 observer.unobserve(entry.target);
             }else {
                 entry.target.classList.remove("active");
