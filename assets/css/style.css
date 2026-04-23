@@ -505,6 +505,14 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, .14);
 }
 
+@media screen and (max-width:600px) {
+  
+  .video-expo {
+    width: 90%;
+  }
+
+}
+
 @media screen and (max-width:700px) {
   .video-box {
     padding: 0;
@@ -657,6 +665,12 @@ video {
   position: relative;
 }
 
+@media screen and (max-width:600px) {
+  .service-inner {
+    width: 90%;
+  }
+}
+
 .service-radius {
   background: #1b5cb1;
   display: flex;
@@ -762,11 +776,18 @@ video {
   background: #fff;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   width: 100%;
   padding: 30px 0;
   text-align: center;
   border-radius: 12px;
   box-shadow: 0 14px 20px rgba(0, 0, 0, .14);
+}
+
+@media screen and (max-width:600px) {
+  .price-card {
+    width: 90%;
+  }
 }
 
 .price-card h3 {
