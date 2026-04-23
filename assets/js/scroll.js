@@ -1,4 +1,4 @@
-const scrollBtns = document.querySelectorAll('.top-link, .link-btn');
+const scrollBtns = document.querySelectorAll(".top-link, .link-btn");
 
 window.addEventListener('scroll', () => {
     scrollBtns.forEach((btn) => {
