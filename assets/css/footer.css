@@ -15,17 +15,14 @@
     width: fit-content;
     font-size: 20px;
     font-weight: 400;
-    color: var(--text-color);
+    position: relative;
 }
 
 .foot-top-link {
     margin: 0 auto;
 }
 
-.foot-link {
-    position: relative;
-}
-
+.foot-top-link::after,
 .foot-link::after {
     background-color: currentColor;
     position: absolute;
@@ -39,11 +36,11 @@
     transition: transform .3s ease;
 }
 
+.foot-top-link:hover::after,
 .foot-link:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
-
 
 .sm {
     text-align: center;
