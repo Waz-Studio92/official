@@ -2,12 +2,34 @@
 const wraps = document.querySelectorAll('.video-wrap');
 const isHoverDevice = window.matchMedia('(hover: hover)').matches;
 
+const options = {
+    root: null,
+    rootMargin: "-10px 0px",
+    threshold: 0
+}
+
+const observer = new IntersectionObserver ((entries) => {
+    entries.forEach(entry => {
+        const video = entry.target.querySelector('video');
+        const thumb = entry.target.querySelector('.thumbnail');
+
+        if (!entry.isIntersecting) {
+            video.pause();
+            video.currentTime = 0;
+            thumb.classList.remove('is-hidden');
+        }
+    });
+}, options);
+
+
 //wrapsに対してforEachを使い、個別のwrapを取り出す
 wraps.forEach(wrap => {
 
     //あらかじめ、このwrapの中にあるパーツを特定しておく
     const thumb = wrap.querySelector('.thumbnail');
     const video = wrap.querySelector('video');
+
+    observer.observe(wrap);
 
     //取り出した「個別のwrap」にEventListenerを登録する
     if (isHoverDevice) {
@@ -20,6 +42,7 @@ wraps.forEach(wrap => {
 
         wrap.addEventListener('mouseleave', () => {
             // 離れたら戻す
+            thumb.classList.pause()
             thumb.classList.remove('is-hidden');
         });
         
