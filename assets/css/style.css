@@ -7,7 +7,7 @@
 /* top-btn */
 
 .top-link {
-  background: #00acee;
+  background: var(--accent-color);
   display: flex;
   flex-direction: column;
   width: 70px;
@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 5px;
-  color: #fff;
+  color: var(--sub-color);
   text-decoration: none;
   font-weight: 900;
   font-size: 10px;
@@ -133,7 +133,7 @@
 
 .site-logo-name {
   font-family: impact;
-  color: #333;
+  color: var(--text-color);
 }
 
 .site-sub-name {
@@ -202,7 +202,7 @@
 .cta-section {
   display: flex;
   flex-direction: column;
-  background: #00acee;
+  background: var(--accent-color);
   margin: 2.5em auto 0 auto;
   width: 90%;
   max-width: 900px;
@@ -221,14 +221,14 @@
 
 .cta-msg {
   display: block;
-  color: #fff;
+  color: var(--sub-color);
   font-size: 17px;
   font-weight: 600;
 }
 
 .cta-small-msg {
   display: none;
-  color: #fff;
+  color: var(--sub-color);
   font-size: 20px;
   font-weight: 700;
 }
@@ -256,7 +256,7 @@
   font-size: 30px;
   font-weight: 900;
   font-family: arial;
-  color: #fff;
+  color: var(--sub-color);
   transition: .4s;
 }
 
@@ -267,24 +267,24 @@
 
 .cta-btn {
   display: block;
-  background: #fff;
+  background: var(--bg-white);
   margin: .5em auto;
   padding: 10px 20px;
-  color: #00acee;
+  color: var(--accent-color);
   font-family: arial;
   font-weight: 900;
   font-size: 25px;
   width: 80%;
   max-width: 320px;
   border-radius: 12px;
-  border: 2px solid #fff;
+  border: 2px solid var(--sub-color);
   transition: .4s ease;
 }
 
 .cta-btn:hover,
 .cta-btn:focus {
-  background: #00acee;
-  color: #fff;
+  background: var(--accent-color);
+  color: var(--sub-color);
 }
 
 @media screen and (max-width:500px) {
@@ -312,7 +312,9 @@
   background-color: #0d1117;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 20px 1rem;
+  width: 95%;
   border-radius: 6px;
   border: 1px solid #30363d;
   font-family: 'Courier New', Courier, monospace;
@@ -332,27 +334,32 @@
   color: #8b949e;
 }
 
+.log-type {
+  width: fit-content;
+  padding: 0 5px;
+}
+
 .type-feat {
   background: #238636;
-  color: white;
+  color: var(--sub-color);
 }
 
 /* 緑 */
 .type-fix {
   background: #da3633;
-  color: white;
+  color: var(--sub-color);
 }
 
 /* 赤 */
 .type-work {
   background: #1f6feb;
-  color: white;
+  color: var(--sub-color);
 }
 
 /* 青 */
 .type-sys {
   background: #8b949e;
-  color: black;
+  color: #000;
 }
 
 /* グレー */
@@ -372,7 +379,7 @@
 .position-main {
   font-family: Arial, sans-serif;
   font-weight: 900;
-  color: #00acee;
+  color: var(--accent-color);
   letter-spacing: .08em;
   font-size: 20px;
 }
@@ -595,7 +602,7 @@ video {
 
 .video-wrap.is-playing {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  box-shadow: 0 10px 30px var(--sub-shadow-color);
 }
 
 .explain {
@@ -650,7 +657,7 @@ video {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 14px 20px rgba(0, 0, 0, .14);
+  box-shadow: 0 14px 20px var(--main-shadow-color);
   margin: 20px auto 2em;
   padding: 3em 0 20px;
   position: relative;
@@ -708,7 +715,7 @@ video {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
-  color: #fff;
+  color: var(--sub-color);
   border-radius: 12px;
 }
 
@@ -717,7 +724,7 @@ video {
   padding: 0 1.5em;
   line-height: 1.6;
   width: 90%;
-  color: #444;
+  color: var(--middle-text-color);
 }
 
 .price {
@@ -736,7 +743,7 @@ video {
   text-align: center;
   margin: 0 auto 2em;
   font-size: 17px;
-  color: #00acee;
+  color: var(--accent-color);
   font-weight: 700;
 }
 
@@ -930,16 +937,16 @@ textarea {
   max-width: 240px;
   border-radius: 50px;
   cursor: pointer;
-  border: 2px solid #00acee;
+  border: 2px solid var(--accent-color);
   font-size: 18px;
   font-weight: 700;
   letter-spacing: .05em;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px var(--sub-shadow-color);
   transition: .4s ease;
 }
 
 .submit:hover {
-  background: #00acee;
+  background: var(--accent-color);
   box-shadow: none;
   transform: translateY(-2px);
 }
@@ -968,7 +975,7 @@ textarea {
 
 .thanks-title {
   text-align: center;
-  border-bottom: 3px solid #00acee;
+  border-bottom: 3px solid var(--accent-color);
   width: fit-content;
   padding-bottom: .25em;
 }
@@ -979,7 +986,7 @@ textarea {
 
 .back-btn {
   display: inline-block;
-  margin: 2em auto 0 auto;
+  margin: 2em auto 0;
   padding: .5em 0;
   text-decoration: none;
   position: relative;
@@ -1002,7 +1009,7 @@ textarea {
 
 .back-btn:hover,
 .back-btn:focus {
-  color: #00acee;
+  color: var(--accent-color);
 }
 
 .back-btn::after {

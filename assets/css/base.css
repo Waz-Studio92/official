@@ -16,12 +16,25 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --bg-white: #fff;
+    --text-color: #333;
+    --sub-color: #fff;
+    --middle-text-color: #444;
+    --accent-color: #00acee;
+    --header-height: 72px;
+    --default-font-size: 15px;
+    --main-shadow-color: rgba(0, 0, 0, .14);
+    --sub-shadow-color: rgba(0, 0, 0, .2);
+    --border-color: rgba(0, 0, 0, .2);
+}
+
 body {
     display: block;
     min-width: 320px;
     font-family: 'Noto Sans JP', "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", "sans-serif";
-    font-size: 15px;
-    color: #333;
+    font-size: var(--default-font-size);
+    color: var(--text-color);
 }
 
 /* main */
@@ -29,6 +42,16 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    margin: 72px auto 0 auto;
+    margin: var(--header-height) auto 0;
     width: 100%;
+    min-height: 100vh;
+}
+
+a,img,span {
+    display: block;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
 }
