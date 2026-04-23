@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const options = {
         root: null,
         rootMargin: "-10% 0px", // 少し画面に入ってから発火させる
-        threshold: 0.1
+        threshold: 0
     };
 
     const observer = new IntersectionObserver((entries) => {
