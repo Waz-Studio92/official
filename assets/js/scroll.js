@@ -10,26 +10,22 @@ window.addEventListener('scroll', () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const options = {
-        root: null,
-        rootMargin: "-10% 0px", // 少し画面に入ってから発火させる
-        threshold: 0
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("active");
-                // 一度表示されたら監視を解除
-                observer.unobserve(entry.target);
-            }else {
-                entry.target.classList.remove("active");
-            }
+const targets = document.querySelectorAll("#hero,#home,#about,#works,#service,#price,#qa,#contact")
+    {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-active");
+                } else {
+                    entry.target.classList.remove("is-active");
+                }
+            });
+        }, {
+            threshold: .2
         });
-    }, options);
-
-    // .reveal クラスを持つ要素をすべて監視対象にする
-    const targets = document.querySelectorAll(".reveal");
-    targets.forEach(target => observer.observe(target));
-});
+        
+        // .reveal クラスを持つ要素をすべて監視対象にする
+        targets.forEach(t => {
+            observer.observe(t)
+        });
+    }
