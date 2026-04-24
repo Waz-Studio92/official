@@ -17,10 +17,9 @@
   align-items: center;
   padding-bottom: 5px;
   color: var(--sub-color);
-  text-decoration: none;
   font-weight: 900;
   font-size: 10px;
-  transition: .4s;
+  transition: .4s ease;
   opacity: .5;
   bottom: 10%;
   right: 4%;
@@ -41,12 +40,12 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity .4s, visibility .4s, transform .4s;
+  transition: opacity .4s ease, visibility .4s ease, transform .4s ease;
 }
 
 .top-link:hover,
 .top-link-btn:hover {
-  background: #333;
+  background: var(--text-color);
   opacity: 1;
   transform: translateY(-5px);
 }
@@ -71,17 +70,6 @@
 .section-title {
   text-align: center;
   margin: 1em auto;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity .8s ease, transform .8s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* hero */
@@ -502,7 +490,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, .14);
+  box-shadow: 0 4px 20px var(--main-shadow-color);
 }
 
 @media screen and (max-width:600px) {
@@ -652,7 +640,7 @@ video {
 }
 
 .service-inner {
-  background-color: #fff;
+  background-color: var(--bg-white);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -684,7 +672,7 @@ video {
   transform: translate(-50%, -50%);
   top: 0;
   left: 50%;
-  color: #fff;
+  color: var(--sub-color);
 }
 
 .service-radius h3 {
@@ -878,7 +866,7 @@ form {
   max-width: 480px;
   gap: 2em;
   border-radius: 12px;
-  box-shadow: 0 14px 20px rgba(0, 0, 0, .14);
+  box-shadow: 0 14px 20px var(--main-shadow-color);
 }
 
 .input-box {
@@ -904,7 +892,7 @@ textarea {
 .input:focus,
 textarea:focus {
   outline: none;
-  border: 1px solid #00acee;
+  border: 1px solid var(--accent-color);
   box-shadow: 0 0 0 2px rgba(0, 172, 238, .2);
 }
 
@@ -998,6 +986,54 @@ textarea {
 .thanks-msg {
   line-height: 2;
 }
+
+#hero,#home,#about,#works,
+#service,#price,#qa,#contact {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+#hero.is-active,
+#home.is-active,
+#about.is-active,
+#works.is-active,
+#service.is-active,
+#price.is-active,
+#qa.is-active,
+#contact.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#home.is-active {
+  transition-delay: .15s;
+}
+
+#about.is-active {
+  transition-delay: .2s;
+}
+
+#works.is-active {
+  transition-delay: .25s;
+}
+
+#service.is-active {
+  transition-delay: .3s;
+}
+
+#price.is-active {
+  transition-delay: .35s;
+}
+
+#qa.is-active {
+  transition-delay: .4s;
+}
+
+#contact.is-active {
+  transition-delay: .45s;
+}
+
 
 /* break-points tablet */
 
