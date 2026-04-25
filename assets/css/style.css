@@ -321,30 +321,30 @@
   padding: 0 5px;
 }
 
+/* 緑 */
 .type-feat {
   background: #238636;
   color: var(--sub-color);
 }
 
-/* 緑 */
+/* 赤 */
 .type-fix {
   background: #da3633;
   color: var(--sub-color);
 }
 
-/* 赤 */
+/* 青 */
 .type-work {
   background: #1f6feb;
   color: var(--sub-color);
 }
 
-/* 青 */
+/* グレー */
 .type-sys {
   background: #8b949e;
   color: #000;
 }
 
-/* グレー */
 
 .log-msg {
   color: #c9d1d9;
