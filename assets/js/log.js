@@ -1,31 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const logContainer = document.getElementById('log-container');
+const logContainer = document.getElementById('log-container');
 
-    if (logContainer) {
-        //外部のJSONファイルを読みに行く
-        fetch('./assets/data/log.json')
-            .then(response => response.json())
-            .then(activityLogs => {
+document.addEventListener('DOMContentLoaded', async () => {
 
-                // latestLogsを切り出す
-                const latestLogs = activityLogs.slice(0, 4);
+    try {
+        const configResponse = await fetch('./assets/data/log.json');
+        if (!configResponse.ok) throw new Error ('Config load failed');
+        const jsonData = await configResponse.json();
 
-                // 最初の[0 ~ 4]を切り出す
-                latestLogs.forEach(log => {
+        const activityLogs = jsonData.logs;
+        console.log(activityLogs);
 
-                    // divにデータを放り込む
-                    const logItem = document.createElement('div');
+        const latestLogs = activityLogs.slice(0, 4);
 
-                    // データの送り先は <div class="log-item">
-                    logItem.className = 'log-item';
-                    logItem.innerHTML = `
-                        <span class="log-date">${log.date}</span>
-                        <span class="log-type type-feat type-fix type-work type-sys${log.type}">${log.type}</span>
-                        <span class="log-msg">${log.msg}</span>
-                    `;
-                    logContainer.appendChild(logItem);
-                });
-            })
-            .catch(error => console.log("ログが読めませんでした", error));
-    }
+        latestLogs.forEach(log => {
+            const logItem = document.createElement('div');
+            logItem.className = 'log-item';
+            logContainer.appendChild(logItem);
+
+            log.children.forEach(child => {
+                const childEl = document.createElement(child.tag);
+                if (child.class) childEl.className = child.class;
+                if (child.text) childEl.textContent = child.text;
+                if (child.datetime) childEl.datetime = child.datetime;
+                logItem.appendChild(childEl);
+            });
+        });
+            
+        } catch(e){
+            console.error(e)
+
+            const errorBox = document.createElement('div');
+            errorBox.className = 'error-box';
+            errorBox.textContent = 'データの読み込みに失敗しました。後でもう一度お試しください。';
+
+            document.body.appendChild(errorBox);
+
+        }
 });
