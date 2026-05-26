@@ -306,19 +306,24 @@
   padding: 8px 0;
   border-bottom: 1px solid #21262d;
   display: inline-block;
-  flex-direction: row;
-  gap: 15px;
   font-size: 0.9rem;
   align-items: center;
+  text-align: left;
 }
 
-.log-date {
-  color: #8b949e;
+.date-time {
+  display: block;
+  color: #ddd;
 }
 
 .log-type {
   width: fit-content;
   padding: 0 5px;
+}
+
+.date-time,
+.log-type {
+  margin-bottom: 5px;
 }
 
 /* 緑 */
@@ -347,7 +352,7 @@
 
 
 .log-msg {
-  color: #c9d1d9;
+  color: #ddd;
 }
 
 /* about */
@@ -828,9 +833,10 @@ video {
 }
 
 details {
+  text-align: left;
   display: flex;
   flex-direction: column;
-  margin: 0 0 1em 3em;
+  padding: 0 1rem 1rem 1rem;
   transition: all .3s;
   overflow: hidden;
 }
@@ -842,6 +848,10 @@ summary::-webkit-details-marker {
 details[:open] summary {
   color: #00acee;
   margin-bottom: 1em;
+}
+
+.qa {
+  text-align: left;
 }
 
 .faq-details:focus {
