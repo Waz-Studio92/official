@@ -1,0 +1,102 @@
+{
+    "parts": [
+        { "id": "#header", "dataKey": "headerContent", "callback": "setNav" },
+        { "id": "#footer", "dataKey": "footerContent", "callback": null }
+    ],
+    "headerContent":[
+        {"tag": "header", "class": "header", "children":[
+            {"tag": "a", "href": "index.html", "class": "nav-head-link", "children":[
+                {"tag": "div", "class": "head-box", "children":[
+                    {"tag": "img", "src": "assets/images/site-image.png", "alt": "header-link-image", "class": "head-link-img"},
+                {"tag": "div", "class": "title-block", "children": [
+                    {"tag": "h1", "class": "head-title", "text": "STUDIO WAZ"},
+                    {"tag": "p", "class":"head-sub-title", "text": "Creative Studio"}
+                ]}
+            ]}
+        ]},
+            {"tag": "nav", "class": "nav", "children": [
+                {"tag": "input", "type": "checkbox", "id": "nav-toggle", "class": "nav-toggle"},
+                {"tag": "label", "for": "nav-toggle", "class": "nav-btn", "aria-label": "menu-open/close", "children":[
+                    {"tag": "span", "class": "nav-btn span"},
+                    {"tag": "span", "class": "nav-btn span"},
+                    {"tag": "span", "class": "nav-btn span"}
+                ]},
+                {"tag": "label", "for": "nav-toggle", "class": "nav-overlay"},
+                {"tag": "ul" , "class": "nav-list", "children":[
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#hero", "text": "HERO"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#home", "text": "HOME"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#about", "text": "ABOUT"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#works", "text": "WORKS"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#service", "text":"SERVICE"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#price", "text": "PRICE"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#qa", "text": "Q&A"}
+                    ]},
+                    {"tag": "li", "class": "nav-item", "children":[
+                        {"tag": "a", "class": "nav-link", "href": "#contact", "text": "CONTACT"}
+                    ]}
+                ]}
+            ]}
+        ]}
+    ],
+    "footerContent":[
+        {"tag": "footer", "class":"footer", "children": [
+            {"tag": "a", "href": "index.html", "class": "foot-top-link", "text": "STUDIO WAZ"},
+            {"tag": "nav", "class": "foot-nav", "aria-label": "site-map", "children":[
+                {"tag": "p", "class": "sm", "text": "Site Map"},
+                {"tag": "ul", "class": "foot-list", "children":[
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#hero", "text": "HERO"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#home", "text": "HOME"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#about", "text": "ABOUT"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#works", "text": "WORKS"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#service", "text": "SERVICE"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#price", "text": "PRICE"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#qa", "text": "Q&A"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "#contact", "text": "CONTACT"}
+                    ]}
+                ]}
+            ]},
+            {"tag": "nav", "class": "foot-nav", "aria-label": "sns", "children":[
+                {"tag": "p", "class": "sm", "text": "SNS"},
+                {"tag": "ul", "class": "foot-list", "children":[
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "https://x.com/VIDEOCREATE_WAZ", "text": "X(旧:Twitter)"}
+                    ]},
+                    {"tag": "li", "class": "foot-item", "children":[
+                        {"tag": "a", "class": "foot-link", "href": "https://github.com/Waz-Studio92", "text": "GitHub"}
+                    ]}
+                ]}
+            ]}
+        ]},
+        { "tag": "div", "class": "copy-layer", "children": [
+            {"tag": "span", "class": "copy", "text": "© 2022-2026 STUDIO WAZ All Right Reserved."}
+        ]}
+    ]
+}

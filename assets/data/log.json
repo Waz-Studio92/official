@@ -1,27 +1,42 @@
-[
-    {
-        "date": "2026.03.24",
-        "type": "feat",
-        "msg": "画像を圧縮し再アップロードした"
-    },
-    {
-        "date": "2026.03.23",
-        "type": "feat",
-        "msg": "ABOUTセクションのスキル構成をアップデート"
-    },
-    {
-        "date": "2026.03.23",
-        "type": "fix",
-        "msg": "コンタクトフォームのバリデーションを修正"
-    },
-    {
-        "date": "2026.03.20",
-        "type": "work",
-        "msg": "新作MV『グッバイ宣言』をWORKSに追加"
-    },
-    {
-        "date": "2026.03.20",
-        "type": "feat",
-        "msg": "公式サイトSTUDIO WAZ制作開始"
-    }
-]
+{
+    "parts": [
+        { "id": "log-container", "dataKey": "logs", "callback": "setLogContainer" }
+    ],
+    "logs": [
+        {"tag": "div", "class": "log-item", "children": [
+            {"tag": "time", "class": "date-time", "datetime": "2026-05-27", "text": "2026.05.27"},
+            {"tag": "span", "class": "log-type type-feat", "text": "feat"},
+            {"tag": "p", "class": "log-msg", "text": "ログの読み込み方式をアップデート"}
+        ]},
+        {"tag": "div", "class": "log-item", "children": [
+            {"tag": "time", "class": "date-time", "datetime": "2026-05-26", "text": "2026.05.26"},
+            {"tag": "span", "class": "log-type type-feat", "text": "feat"},
+            {"tag": "p", "class": "log-msg", "text": "header / footerの読み込み方式をアップデート"}
+        ]},
+        {"tag": "div", "class": "log-item", "children": [
+            {"tag": "time", "class": "date-time", "datetime": "2026-03-24", "text": "2026.03.24"},
+            {"tag": "span", "class": "log-type type-feat", "text": "feat"},
+            {"tag": "p", "class": "log-msg", "text": "画像を圧縮し再アップロードした"}
+        ]},
+        {"tag": "div", "class": "log-item", "children": [
+            {"tag": "time", "class": "date-time", "datetime": "2026-03-20", "text": "2026.03.23"},
+            {"tag": "span", "class": "log-type type-feat", "text": "feat"},
+            {"tag": "p", "class": "log-msg", "text": "ABOUTセクションのスキル構成をアップデート"}
+        ]},
+        {"tag": "div", "class": "log-item", "children": [
+            {"tag": "time", "class": "date-time", "datetime": "2026-03-23", "text": "2026.03.23"},
+            {"tag": "span", "class": "log-type type-fix", "text": "fix"},
+            {"tag": "p", "class": "log-msg", "text": "コンタクトフォームのバリデーションを修正"}
+        ]},
+        {"tag": "div", "class": "log-item", "children": [
+            {"tag": "time", "class": "date-time", "datetime": "2026-03-20", "text": "2026.03.20"},
+            {"tag": "span", "class": "log-type type-feat", "text": "feat"},
+            {"tag": "p", "class": "log-msg", "text": "新作MV『グッバイ宣言』をWORKSに追加"}
+        ]},
+        {"tag": "div", "class": "log-item", "children": [
+            {"tag": "time", "class": "date-time", "datetime": "2026-03-20", "text": "2026.03.20"},
+            {"tag": "span", "class": "log-type type-feat", "text": "feat"},
+            {"tag": "p", "class": "log-msg", "text": "公式サイトSTUDIO WAZ制作開始"}
+        ]}
+    ]
+}
